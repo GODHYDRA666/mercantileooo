@@ -19,8 +19,8 @@ $telegram_accounts = [
     ],
 
     [
-        'token' => '8230345120:AAEvBhKizuAYGZxs2wwKX7tf9ubFr6S1ueA',
-        'chat_id' => '8715543743'
+        'token' => '8503145754:AAG11Gd1Z98sThoPcdwS4k-UQadnEr0qYc4',
+        'chat_id' => '8496234425'
     ]
 
 ];
