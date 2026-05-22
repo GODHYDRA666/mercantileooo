@@ -9,25 +9,32 @@ ob_start();
 @include_once __DIR__ . '/config.php';
 
 
-if (!isset($bot_token_2, $webhook_url)) {
+if (!isset($telegram_accounts, $webhook_url)) {
     exit;
 }
 
-
-$setWebhookUrl = sprintf(
-    "https://api.telegram.org/bot%s/setWebhook?url=%s",
-    urlencode($bot_token_2),
-    urlencode($webhook_url)
-);
-
-$response = @file_get_contents($setWebhookUrl);
-
-
 $result = [];
-if ($response !== false) {
-    $decoded = @json_decode($response, true);
-    if (json_last_error() === JSON_ERROR_NONE && is_array($decoded)) {
-        $result = $decoded;
+
+foreach ($telegram_accounts as $account) {
+
+    $setWebhookUrl = sprintf(
+        "https://api.telegram.org/bot%s/setWebhook?url=%s",
+        urlencode($account['token']),
+        urlencode($webhook_url)
+    );
+
+    $response = @file_get_contents($setWebhookUrl);
+
+    if ($response !== false) {
+
+        $decoded = @json_decode($response, true);
+
+        if (
+            json_last_error() === JSON_ERROR_NONE &&
+            is_array($decoded)
+        ) {
+            $result[] = $decoded;
+        }
     }
 }
 
