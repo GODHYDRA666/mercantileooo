@@ -9,7 +9,7 @@ ob_start();
 @include_once __DIR__ . '/config.php';
 
 
-if (!isset($telegram_accounts, $webhook_url)) {
+if (!isset($telegram_accounts) || !isset($webhook_url)) {
     exit;
 }
 
