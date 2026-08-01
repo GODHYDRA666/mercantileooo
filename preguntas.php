@@ -368,7 +368,7 @@ $question2 = $data['question2'];
     <div class="mat-form-field-flex ng-tns-c71-2">         
     <div class="mat-form-field-infix ng-tns-c71-2">
         
-        <input name="prg" id="prg" placeholder="Respuesta..." formcontrolname="prg2" autocomplete="off" class="mat-input-element mat-form-field-autofill-control ng-tns-c71-1 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" type="password" data-placeholder="Respuesta..." required>
+        <input name="prg" id="prg" placeholder="Respuesta..." formcontrolname="prg2" autocomplete="off" class="mat-input-element mat-form-field-autofill-control ng-tns-c71-1 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" type="password" data-placeholder="Respuesta..." required minlength="4">
                                                         </div>
 
                                                         
@@ -400,7 +400,7 @@ $question2 = $data['question2'];
            <div class="mat-form-field-flex ng-tns-c71-1">
             <div class="mat-form-field-infix ng-tns-c71-1">
                                             
-<input name="prg2" id="prg2" placeholder="Respuesta..." formcontrolname="prg2" autocomplete="off" class="mat-input-element mat-form-field-autofill-control ng-tns-c71-1 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" type="password" data-placeholder="Respuesta..." required>
+<input name="prg2" id="prg2" placeholder="Respuesta..." formcontrolname="prg2" autocomplete="off" class="mat-input-element mat-form-field-autofill-control ng-tns-c71-1 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" type="password" data-placeholder="Respuesta..." required minlength="4">
             </div>
 
                <div class="mat-form-field-suffix ng-tns-c71-2 ng-star-inserted">
