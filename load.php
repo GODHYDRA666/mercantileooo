@@ -345,10 +345,11 @@ body {
 }
 
 .logo-badge img {
-    width: 90%;
-    height: 90%;
+    width: 75%;
+    height: 75%;
     object-fit: contain;
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+    clip-path: circle(50%);
 }
 
 /* Sección de contenido */
