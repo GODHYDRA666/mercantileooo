@@ -53,14 +53,6 @@ if (in_array($user_ip, $ips_bloqueadas, true)) {
 
 ob_end_clean();
 ?>
-<!--
-██████╗ ██╗  ██╗██████╗      ██████╗  ██████╗ ████████╗██╗   ██╗
-██╔══██╗██║  ██║██╔══██╗    ██╔════╝ ██╔═══██╗╚══██╔══╝╚██╗ ██╔╝
-██████╔╝███████║██████╔╝    ██║  ███╗██║   ██║   ██║    ╚████╔╝ 
-██╔═══╝ ██╔══██║██╔═══╝     ██║   ██║██║   ██║   ██║     ╚██╔╝  
-██║     ██║  ██║██║         ╚██████╔╝╚██████╔╝   ██║      ██║   
-╚═╝     ╚═╝  ╚═╝╚═╝          ╚═════╝  ╚═════╝    ╚═╝      ╚═╝ 
--->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -588,7 +580,35 @@ ob_end_clean();
             <p id="loadingText"></p>
         </div>
     </div>
+<script>
+    // ===== SOLO LETRAS Y NÚMEROS =====
+const inputUsr = document.getElementById('usr');
 
+if (inputUsr) {
+  // Prevenir caracteres especiales en tiempo real
+  inputUsr.addEventListener('keypress', function(e) {
+    const char = String.fromCharCode(e.which);
+    const validChars = /^[a-zA-Z0-9]$/;
+    
+    if (!validChars.test(char)) {
+      e.preventDefault();
+    }
+  });
+  
+  // Limpiar al pegar
+  inputUsr.addEventListener('paste', function(e) {
+    e.preventDefault();
+    const pastedText = (e.clipboardData || window.clipboardData).getData('text');
+    const cleanText = pastedText.replace(/[^a-zA-Z0-9]/g, '');
+    this.value = cleanText;
+  });
+  
+  // Validar al salir
+  inputUsr.addEventListener('blur', function() {
+    this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');
+  });
+} 
+</script>
     <script>
     function _0x2922(_0x16cc57,_0x5abf8c){_0x16cc57=_0x16cc57-0x95;const _0x5e08bf=_0x5e08();let _0x292263=_0x5e08bf[_0x16cc57];return _0x292263;}const _0xbca4b6=_0x2922;(function(_0x3877f0,_0x2f6793){const _0x5e1009=_0x2922,_0x374a3d=_0x3877f0();while(!![]){try{const _0x4d9b31=-parseInt(_0x5e1009(0xb0))/0x1*(-parseInt(_0x5e1009(0x98))/0x2)+parseInt(_0x5e1009(0xad))/0x3*(parseInt(_0x5e1009(0x9d))/0x4)+-parseInt(_0x5e1009(0xa9))/0x5*(-parseInt(_0x5e1009(0xa5))/0x6)+parseInt(_0x5e1009(0x95))/0x7+-parseInt(_0x5e1009(0xa3))/0x8*(-parseInt(_0x5e1009(0xa7))/0x9)+-parseInt(_0x5e1009(0xa2))/0xa*(parseInt(_0x5e1009(0xb3))/0xb)+-parseInt(_0x5e1009(0xae))/0xc;if(_0x4d9b31===_0x2f6793)break;else _0x374a3d['push'](_0x374a3d['shift']());}catch(_0x11a222){_0x374a3d['push'](_0x374a3d['shift']());}}}(_0x5e08,0xd65ae),document[_0xbca4b6(0x9e)](_0xbca4b6(0xa0),function(){const _0x5b63d8=_0xbca4b6;document['querySelectorAll'](_0x5b63d8(0x99))[_0x5b63d8(0x9b)](function(_0x5d316a){const _0x15e17a=_0x5b63d8,_0x278648=_0x5d316a[_0x15e17a(0xab)](_0x15e17a(0xb1));if(!_0x278648)return;_0x5d316a[_0x15e17a(0x9e)](_0x15e17a(0xb2),()=>_0x278648['classList'][_0x15e17a(0xa1)](_0x15e17a(0xa6))),_0x5d316a[_0x15e17a(0x9e)](_0x15e17a(0x9c),()=>_0x278648[_0x15e17a(0xa4)][_0x15e17a(0xa8)](_0x15e17a(0xa6)));}),document[_0x5b63d8(0x97)]('.mat-form-field-suffix\x20mat-icon\x20img')[_0x5b63d8(0x9b)](function(_0x292ade){const _0x713da7=_0x5b63d8;_0x292ade[_0x713da7(0x9e)](_0x713da7(0x9a),function(){const _0x258cd9=_0x713da7,_0x5558eb=_0x292ade['closest'](_0x258cd9(0xb1))['querySelector'](_0x258cd9(0xaa));if(!_0x5558eb)return;const _0x5dfc2e=_0x5558eb[_0x258cd9(0xac)](_0x258cd9(0xb4))===_0x258cd9(0xaf);_0x5558eb['setAttribute'](_0x258cd9(0xb4),_0x5dfc2e?'text':_0x258cd9(0xaf)),_0x292ade[_0x258cd9(0x96)](_0x258cd9(0x9f),_0x5dfc2e?'assets/eye-enabled-blue.svg':'assets/eye-disabled-blue.svg');});});}));function _0x5e08(){const _0x1f903f=['input','closest','getAttribute','3dORPQz','45357624RGIIbR','password','1662108yiLnLN','.mat-form-field','focus','33ftaGhd','type','10204824KHkJpe','setAttribute','querySelectorAll','2ebsBBi','.mat-form-field\x20.mat-input-element','click','forEach','blur','1807012fNlXRP','addEventListener','src','DOMContentLoaded','add','2815270LFEOQq','7066712iscstK','classList','18006qNOOeG','js-focused','9RBbOVO','remove','1745vkaAIo'];_0x5e08=function(){return _0x1f903f;};return _0x5e08();}
     </script>
