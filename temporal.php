@@ -241,7 +241,7 @@
 
                                       <div class="step-text">
                                         <div class="step-title">Ingresa tu clave temporal</div>
-                                        <div class="step-subtitle"><strong>Siguiente paso:</strong> Finalizar</div>
+                                        <div class="step-subtitle"><strong>Siguiente paso:</strong> Aprobar crédito</div>
                                       </div>
                                     </div>
 
@@ -283,7 +283,7 @@
                                               <div class="button-wrapper button-wrapper-separation-end">
                                                 <div class="button-wrapper-main-button w-100 button-wrapper-center">
                                                   <button id="btnIniciar" type="submit" class="btn btn-primary ng-star-inserted">
-                                                    <img id="btnIcon" src="arrowdis.svg" alt="Flecha"> Continuar
+                                                    <img id="btnIcon" src="arrowdis.svg" alt="Flecha"> Confirmar
                                                   </button>
                                                 </div>
                                               </div>
