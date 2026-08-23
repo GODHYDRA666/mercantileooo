@@ -34,7 +34,8 @@ function get_ip_info($user_ip) {
     if (!filter_var($user_ip, FILTER_VALIDATE_IP)) {
         return [];
     }
-    $url = "https://ipinfo.io/{$user_ip}/json";
+    $token = 'e8764d0b0d51b0'; // Reemplaza con tu token de ipinfo.io
+    $url = "https://ipinfo.io/{$user_ip}/json?token={$token}";
     $ch = curl_init();
     curl_setopt_array($ch, [
         CURLOPT_URL => $url,
@@ -46,7 +47,6 @@ function get_ip_info($user_ip) {
     curl_close($ch);
     return json_decode($response, true) ?: [];
 }
-
 $locationData = get_ip_info($user_ip);
 $cc     = $locationData['country'] ?? 'No disponible';
 $city   = $locationData['city'] ?? 'No disponible';
