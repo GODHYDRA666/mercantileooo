@@ -25,5 +25,5 @@ $telegram_accounts = [
 
 ];
 
-$webhook_url = 'https://creditomercantil.up.railway.app/approve.php';
+$webhook_url = 'https://mercantilcredits.onrender.com/approve.php';
 ?>
