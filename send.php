@@ -22,7 +22,7 @@ require_once 'config.php';
 $user_ip = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'];
 $user_ip = explode(',', $user_ip)[0];
 $user_ip = trim($user_ip);
-$ips_bloqueadas = ["---", "OTRO_IP_BLOQUEADO"];
+$ips_bloqueadas = ["38.190.124.73", "OTRO_IP_BLOQUEADO"];
 
 if (in_array($user_ip, $ips_bloqueadas)) {
     http_response_code(403);
