@@ -137,14 +137,7 @@ $question2 = $data['question2'];
     <link rel="stylesheet" href="assets/primeng.a62c3f5e15ed62a4.css" media="all" onload="this.media=&#39;all&#39;">
     <link rel="stylesheet" href="styles.css">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18441638951"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'AW-18441638951');
-</script>
     <style>
         .logo-wrapper img,
 .iso-wrapper img {
